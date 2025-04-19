@@ -5,13 +5,20 @@
 ### (_Learning Path_)
 
 - [ ] Building a 3D scene
-  - [ ] Create needed TS types
+  - [x] Create needed TS types
   - [ ] Create needed elements config file
   - [ ] Create a global container to encapsulate elements
     - [ ] --> container's state
-    - [ ] --> container's config
-  - [ ] Create Vue component to handle **LifeCycles**
-  - [ ] Design background and stars _programmatically_
+      - [x] renderer
+      - [x] camera
+      - [x] scene
+      - [ ] controls
+      - [ ] GUI
+        - [ ] Dev Helpers
+        - [ ] User Interactions
+    - [x] --> container's config
+  - [x] Create Vue component to handle **LifeCycles**
+  - [x] Design background and stars _programmatically_
   - [ ] Add **ambient** light
   - [ ] Add spherical celestial bodies to the scene
     - [ ] Building Sun together with **Sun's** light
@@ -22,7 +29,7 @@
     - [ ] Mars
     - [ ] Jupiter
     - [ ] Saturn
-      - [ ] _edge-case_ : Saturn's **rings**
+      - [x] _edge-case_ : Saturn's **rings**
     - [ ] Uranus
     - [ ] Neptune
     - [ ] Pluto
