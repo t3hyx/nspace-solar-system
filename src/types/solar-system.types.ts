@@ -1,10 +1,10 @@
 import type * as THREE from 'three'
 
 export interface ISolarSystemConfig {
+  cameraPosition: THREE.Vector3
   fov: number
   near: number
   far: number
-  cameraPosition: THREE.Vector3
   backgroundColor: number
   lightColor: number
   lightIntensity: number
@@ -18,4 +18,11 @@ export interface ISolarSystemState {
   renderer: THREE.WebGLRenderer
   objects: THREE.Object3D[]
   animationFrameId: number
+}
+
+export interface IStarsBackgroundConfig {
+  color: number
+  count: number
+  size: number
+  sizeAttenuation: boolean
 }

@@ -1,4 +1,4 @@
-import type { ISolarSystemConfig } from '@/types/solar-system.types'
+import type { ISolarSystemConfig, IStarsBackgroundConfig } from '@/types/solar-system.types'
 import { colors } from '@/configs/colorConfig'
 import * as THREE from 'three'
 
@@ -16,4 +16,11 @@ export const solarSystemConfig: ISolarSystemConfig = {
   backgroundColor: colors.pureBlack,
   lightColor: colors.pureWhite,
   ambientLightColor: colors.pureWhite,
+}
+
+export const starsBackgroundConfig: IStarsBackgroundConfig = {
+  color: colors.pureWhite,
+  count: 10000,
+  size: 0.5,
+  sizeAttenuation: true,
 }
