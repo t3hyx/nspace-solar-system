@@ -23,4 +23,10 @@ export class SolarSystemService {
 
     return camera
   }
+
+  private createScene(): THREE.Scene {
+    const scene = new THREE.Scene()
+    scene.background = new THREE.Color(this.config.backgroundColor)
+    return scene
+  }
 }
