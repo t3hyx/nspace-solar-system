@@ -4,11 +4,28 @@ import * as THREE from 'three'
 
 export class SolarSystemService {
   private config: ISolarSystemConfig
-  private state: ISolarSystemState | null = null
+  private state: ISolarSystemState
 
   constructor(container: HTMLElement, config: ISolarSystemConfig) {
     this.config = config
-    this.state = null
+    this.state = this.initializeState(container)
+  }
+
+  private initializeState(container: HTMLElement): ISolarSystemState {
+    const renderer = new THREE.WebGLRenderer({ antialias: true })
+    renderer.setSize(container.clientWidth, container.clientHeight)
+    container.appendChild(renderer.domElement)
+
+    const camera = this.createCamera(container)
+    const scene = this.createScene()
+
+    return {
+      renderer,
+      camera,
+      scene,
+      objects: [],
+      animationFrameId: 0,
+    }
   }
 
   private createCamera(container: HTMLElement): THREE.PerspectiveCamera {
