@@ -1,4 +1,5 @@
 import type { ISolarSystemConfig, ISolarSystemState } from '@/types/solar-system.types'
+import { createStarsBackground } from '@/utils/createStarsBackground'
 import * as THREE from 'three'
 
 export class SolarSystemService {
@@ -27,6 +28,9 @@ export class SolarSystemService {
   private createScene(): THREE.Scene {
     const scene = new THREE.Scene()
     scene.background = new THREE.Color(this.config.backgroundColor)
+    // Fill background with random-positioned stars
+    scene.add(createStarsBackground())
+
     return scene
   }
 }
