@@ -6,11 +6,12 @@ export const solarSystemConfig: ISolarSystemConfig = {
   fov: 75,
   near: 0.1,
   far: 1000,
-  lightIntensity: 1,
+  lightIntensity: 3,
+  ambientLightIntensity: 1,
   cameraPosition: new THREE.Vector3(
     0, // x
-    0, // y
-    10, // z
+    20, // y
+    40, // z
   ),
   backgroundColor: colors.pureBlack,
   lightColor: colors.pureWhite,

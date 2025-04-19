@@ -9,6 +9,7 @@ export interface ISolarSystemConfig {
   lightColor: number
   lightIntensity: number
   ambientLightColor: number
+  ambientLightIntensity: number
 }
 
 export interface ISolarSystemState {
